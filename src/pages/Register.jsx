@@ -30,7 +30,7 @@ export default function Register() {
 		setIsLoading(true);
 
 		try {
-			const response = await axios.post("https://rbac-9v5c.onrender.com/api/register/", formData);
+			const response = await axios.post("https://backend-qlyx.onrender.com/api/register/", formData);
 			console.log("Success!", response.data);
 			setSuccessMessage("Registration Successful!");
 		} catch (error) {

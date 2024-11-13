@@ -17,7 +17,7 @@ export default function Home() {
               "Authorization":`Bearer ${token}`
             }
           };
-          const response = await axios.get("https://rbac-9v5c.onrender.com/api/user/", config)
+          const response = await axios.get("https://backend-qlyx.onrender.com/api/user/", config)
           setLoggedIn(true)
           setUsername(response.data.username)
         }
@@ -45,7 +45,7 @@ export default function Home() {
             "Authorization":`Bearer ${accessToken}`
           }
         };
-        await axios.post("https://rbac-9v5c.onrender.com/api/logout/", {"refresh":refreshToken}, config)
+        await axios.post("https://backend-qlyx.onrender.com/api/logout/", {"refresh":refreshToken}, config)
         localStorage.removeItem("accessToken");
         localStorage.removeItem("refreshToken");
         setLoggedIn(false);
